@@ -1,5 +1,5 @@
 {
-    "name": "sylius/settings-bundle",
+    "name": "chamilo/settings-bundle",
     "type": "symfony-bundle",
     "description": "Settings system for Symfony2 applications, editable via web user interface.",
     "keywords": ["config", "configuration", "settings", "shop", "webshop", "ecommerce"],
@@ -24,7 +24,7 @@
 
         "sylius/registry": "^1.0",
         "sylius/resource-bundle": "^1.0",
-        "symfony/framework-bundle": "^2.8"
+        "symfony/framework-bundle": "^2.8|~3.0"
     },
     "require-dev": {
         "phpspec/phpspec": "^3.1",
