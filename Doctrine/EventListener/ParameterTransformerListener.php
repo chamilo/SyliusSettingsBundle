@@ -19,6 +19,7 @@ use Sylius\Bundle\SettingsBundle\Schema\SchemaInterface;
 use Sylius\Bundle\SettingsBundle\Schema\SettingsBuilder;
 use Sylius\Bundle\SettingsBundle\Transformer\ParameterTransformerInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
+use Symfony\Component\Form\DataTransformerInterface;
 
 /**
  * @author Steffen Brem <steffenbrem@gmail.com>
@@ -127,7 +128,7 @@ final class ParameterTransformerListener
     /**
      * @param SettingsInterface $settings
      *
-     * @return ParameterTransformerInterface[]
+     * @return DataTransformerInterface[]
      */
     protected function getTransformers(SettingsInterface $settings)
     {

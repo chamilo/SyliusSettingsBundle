@@ -12,6 +12,7 @@
 namespace Sylius\Bundle\SettingsBundle\Transformer;
 
 /**
+ * @deprecated
  * @author Paweł Jędrzejewski <pawel@sylius.org>
  */
 interface ParameterTransformerInterface

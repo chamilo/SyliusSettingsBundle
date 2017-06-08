@@ -11,7 +11,7 @@
 
 namespace Sylius\Bundle\SettingsBundle\Schema;
 
-use Sylius\Bundle\SettingsBundle\Transformer\ParameterTransformerInterface;
+use Symfony\Component\Form\DataTransformerInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
 /**
@@ -20,7 +20,7 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 class SettingsBuilder extends OptionsResolver implements SettingsBuilderInterface
 {
     /**
-     * @var ParameterTransformerInterface[]
+     * @var DataTransformerInterface[]
      */
     protected $transformers = [];
 
@@ -35,10 +35,10 @@ class SettingsBuilder extends OptionsResolver implements SettingsBuilderInterfac
     /**
      * {@inheritdoc}
      */
-    public function setTransformer($parameterName, ParameterTransformerInterface $transformer)
+    public function setTransformer($parameterName, DataTransformerInterface $transformer)
     {
         $this->transformers[$parameterName] = $transformer;
-        
+
         return $this;
     }
 }

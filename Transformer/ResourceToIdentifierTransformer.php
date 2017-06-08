@@ -13,11 +13,12 @@ namespace Sylius\Bundle\SettingsBundle\Transformer;
 
 use Sylius\Component\Resource\Repository\RepositoryInterface;
 use Symfony\Component\PropertyAccess\PropertyAccess;
+use Symfony\Component\Form\DataTransformerInterface;
 
 /**
  * @author Paweł Jędrzejewski <pawel@sylius.org>
  */
-final class ResourceToIdentifierTransformer implements ParameterTransformerInterface
+final class ResourceToIdentifierTransformer implements DataTransformerInterface
 {
     /**
      * @var RepositoryInterface

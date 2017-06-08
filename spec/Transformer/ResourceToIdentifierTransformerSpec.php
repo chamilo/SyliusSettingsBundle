@@ -13,7 +13,7 @@ namespace spec\Sylius\Bundle\SettingsBundle\Transformer;
 
 use PhpSpec\ObjectBehavior;
 use Sylius\Bundle\SettingsBundle\spec\Fixture\ParameterFixture;
-use Sylius\Bundle\SettingsBundle\Transformer\ParameterTransformerInterface;
+use Symfony\Component\Form\DataTransformerInterface;
 use Sylius\Bundle\SettingsBundle\Transformer\ResourceToIdentifierTransformer;
 use Sylius\Component\Resource\Repository\RepositoryInterface;
 
@@ -34,7 +34,7 @@ final class ResourceToIdentifierTransformerSpec extends ObjectBehavior
 
     function it_implements_parameter_transformer_interface()
     {
-        $this->shouldImplement(ParameterTransformerInterface::class);
+        $this->shouldImplement(DataTransformerInterface::class);
     }
 
     function it_returns_null_when_null_transformed()
