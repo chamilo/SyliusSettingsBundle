@@ -14,8 +14,8 @@ namespace Sylius\Bundle\SettingsBundle\Resolver;
 use Sylius\Component\Registry\ServiceRegistryInterface;
 
 /**
- * Cannot be final, because it is proxied 
- * 
+ * Cannot be final, because it is proxied
+ *
  * @author Steffen Brem <steffenbrem@gmail.com>
  */
 class ResolverServiceRegistry implements ServiceRegistryInterface
@@ -43,7 +43,7 @@ class ResolverServiceRegistry implements ServiceRegistryInterface
     /**
      * {@inheritdoc}
      */
-    public function all()
+    public function all(): array
     {
         return $this->decoratedRegistry->all();
     }
@@ -51,7 +51,7 @@ class ResolverServiceRegistry implements ServiceRegistryInterface
     /**
      * {@inheritdoc}
      */
-    public function register($type, $service)
+    public function register(string $type, $service): void
     {
         $this->decoratedRegistry->register($type, $service);
     }
@@ -59,7 +59,7 @@ class ResolverServiceRegistry implements ServiceRegistryInterface
     /**
      * {@inheritdoc}
      */
-    public function unregister($type)
+    public function unregister(string $type): void
     {
         $this->decoratedRegistry->unregister($type);
     }
@@ -67,7 +67,7 @@ class ResolverServiceRegistry implements ServiceRegistryInterface
     /**
      * {@inheritdoc}
      */
-    public function has($type)
+    public function has(string $type): bool
     {
         return $this->decoratedRegistry->has($type);
     }
@@ -75,7 +75,7 @@ class ResolverServiceRegistry implements ServiceRegistryInterface
     /**
      * {@inheritdoc}
      */
-    public function get($type)
+    public function get(string $type)
     {
         if (!$this->decoratedRegistry->has($type)) {
             return $this->defaultResolver;
