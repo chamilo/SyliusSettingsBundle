@@ -19,7 +19,7 @@
             </call>
         </service>
 
-        <service id="sylius.form_factory.settings" class="Sylius\Bundle\SettingsBundle\Form\Factory\SettingsFormFactory">
+        <service id="sylius.form_factory.settings" public="true" class="Sylius\Bundle\SettingsBundle\Form\Factory\SettingsFormFactory">
             <argument type="service" id="sylius.registry.settings_schema" />
             <argument type="service" id="form.factory" />
         </service>
