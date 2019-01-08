@@ -68,7 +68,7 @@ class SettingsController extends FOSRestController
             ->create($schemaAlias, $settings, $isApiRequest ? ['csrf_protection' => false] : [])
         ;
 
-        if ($form->handleRequest($request)->isValid()) {
+        if ($form->isSubmitted() && $form->handleRequest($request)->isValid()) {
             $messageType = 'success';
             try {
                 $settingsManager->save($settings);
@@ -89,7 +89,7 @@ class SettingsController extends FOSRestController
             }
         }
 
-        return $this->render($request->attributes->get('template', 'SyliusSettingsBundle:Settings:update.html.twig'), [
+        return $this->render($request->attributes->get('template', '@SyliusSettings/Settings/update.html.twig'), [
             'settings' => $settings,
             'form' => $form->createView(),
         ]);
