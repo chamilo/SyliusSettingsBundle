@@ -17,6 +17,7 @@
             <call method="setContainer">
                 <argument type="service" id="service_container" />
             </call>
+            <tag name="controller.service_arguments"/>
         </service>
 
         <service id="sylius.form_factory.settings" public="true" class="Sylius\Bundle\SettingsBundle\Form\Factory\SettingsFormFactory">
@@ -24,7 +25,7 @@
             <argument type="service" id="form.factory" />
         </service>
 
-        <service id="sylius.settings_manager" class="Sylius\Bundle\SettingsBundle\Manager\SettingsManager">
+        <service id="sylius.settings_manager" public="true" class="Sylius\Bundle\SettingsBundle\Manager\SettingsManager">
             <argument type="service" id="sylius.registry.settings_schema" />
             <argument type="service" id="sylius.registry.settings_resolver" />
             <argument type="service" id="sylius.manager.settings" />
@@ -32,7 +33,7 @@
             <argument type="service" id="event_dispatcher" />
         </service>
 
-        <service id="sylius.registry.settings_schema" class="Sylius\Component\Registry\ServiceRegistry" lazy="true">
+        <service id="sylius.registry.settings_schema" public="true" class="Sylius\Component\Registry\ServiceRegistry" lazy="true">
             <argument>Sylius\Bundle\SettingsBundle\Schema\SchemaInterface</argument>
             <argument>Settings schema</argument>
         </service>
