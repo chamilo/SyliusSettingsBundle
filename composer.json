@@ -55,7 +55,7 @@
         "symfony/translation": "^3.4|^4.1",
         "symfony/twig-bundle": "^3.4|^4.1",
         "symfony/validator": "^3.4|^4.1",
-        "symfony/yaml": "^3.4|^4.1",
+        "symfony/yaml": "^3.4|^4.1"
     },
     "require-dev": {
         "phpspec/phpspec": "^3.1",
