@@ -34,7 +34,7 @@
         "symfony/yaml": "^3.4|^4.1"
     },
     "require-dev": {
-        "phpspec/phpspec": "^3.1",
+        "phpspec/phpspec": "^3.1"
     },
     "config": {
         "bin-dir": "bin"
