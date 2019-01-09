@@ -45,7 +45,7 @@ final class CallbackSchema implements SchemaInterface
     /**
      * {@inheritdoc}
      */
-    public function buildSettings(SettingsBuilderInterface $builder)
+    public function buildSettings(AbstractSettingsBuilder $builder)
     {
         // Workaround for PHP 5
         $buildSettings = $this->buildSettings;

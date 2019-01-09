@@ -24,12 +24,17 @@
 
         "sylius/registry": "^1.0",
         "sylius/resource-bundle": "^1.0",
-        "symfony/framework-bundle": "~3.0|~4.0"
+
+        "symfony/config": "^3.4|^4.1",
+        "symfony/dependency-injection": "^3.4|^4.1",
+        "symfony/form": "^3.4|^4.1",
+        "symfony/framework-bundle": "^3.4|^4.1",
+        "symfony/options-resolver": "^3.4|^4.1",
+        "symfony/validator": "^3.4|^4.1",
+        "symfony/yaml": "^3.4|^4.1"
     },
     "require-dev": {
-        "phpspec/phpspec": "^3.1",
-        "symfony/form": "~3.0",
-        "symfony/validator": "^3.3"
+        "phpspec/phpspec": "^3.1"
     },
     "config": {
         "bin-dir": "bin"
