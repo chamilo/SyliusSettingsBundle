@@ -12,12 +12,11 @@
 namespace Sylius\Bundle\SettingsBundle\Schema;
 
 use Symfony\Component\Form\DataTransformerInterface;
-use Symfony\Component\OptionsResolver\OptionsResolver;
 
 /**
  * @author Paweł Jędrzejewski <pawel@sylius.org>
  */
-class SettingsBuilder extends OptionsResolver implements SettingsBuilderInterface
+class SettingsBuilder extends AbstractSettingsBuilder
 {
     /**
      * @var DataTransformerInterface[]

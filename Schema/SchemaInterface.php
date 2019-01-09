@@ -21,7 +21,7 @@ interface SchemaInterface
     /**
      * @param SettingsBuilderInterface $builder
      */
-    public function buildSettings(SettingsBuilderInterface $builder);
+    public function buildSettings(AbstractSettingsBuilder $builder);
 
     /**
      * @param FormBuilderInterface $builder
