@@ -52,7 +52,7 @@ interface SettingsInterface extends ResourceInterface, \ArrayAccess, \Countable
     /**
      * @param string $name
      *
-     * @return string
+     * @return mixed
      *
      * @throws ParameterNotFoundException
      */
