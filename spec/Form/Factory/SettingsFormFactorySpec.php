@@ -16,6 +16,7 @@ use Sylius\Bundle\SettingsBundle\Form\Factory\SettingsFormFactory;
 use Sylius\Bundle\SettingsBundle\Form\Factory\SettingsFormFactoryInterface;
 use Sylius\Bundle\SettingsBundle\Schema\SchemaInterface;
 use Sylius\Component\Registry\ServiceRegistryInterface;
+use Symfony\Component\Form\Extension\Core\Type\FormType;
 use Symfony\Component\Form\FormBuilder;
 use Symfony\Component\Form\FormFactoryInterface;
 use Symfony\Component\Form\FormInterface;
@@ -50,7 +51,7 @@ final class SettingsFormFactorySpec extends ObjectBehavior
         ServiceRegistryInterface $schemaRegistry
     ) {
         $schemaRegistry->get('sylius_general')->willReturn($schema);
-        $formFactory->createBuilder('form', null, ['data_class' => null])->willReturn($formBuilder);
+        $formFactory->createBuilder(FormType::class, null, ['data_class' => null])->willReturn($formBuilder);
         $schema->buildForm($formBuilder)->shouldBeCalled()->willReturn($formBuilder);
         $formBuilder->getForm()->willReturn($form);
 

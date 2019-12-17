@@ -54,9 +54,14 @@ final class SettingsFormFactory implements SettingsFormFactoryInterface
             $options = array_merge($schema->getOptions(), $options);
         }
 
-        $builder = $this->formFactory->createBuilder(FormType::class, $data, array_merge_recursive(
-            ['data_class' => null], $options
-        ));
+        $builder = $this->formFactory->createBuilder(
+            FormType::class,
+            $data,
+            array_merge_recursive(
+                ['data_class' => null],
+                $options
+            )
+        );
 
         $schema->buildForm($builder);
 
