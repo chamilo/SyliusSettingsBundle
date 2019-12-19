@@ -3,8 +3,6 @@ language: php
 sudo: false
 
 php:
-    - 7.0
-    - 7.1
     - 7.2
     - 7.3
     - 7.4
@@ -17,4 +15,4 @@ install:
     - composer install --no-interaction --prefer-source
 
 script:
-    - bin/phpspec run -fpretty --verbose
+    - vendor/bin/phpspec run -fpretty --verbose

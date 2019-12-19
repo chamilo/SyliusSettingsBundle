@@ -12,11 +12,13 @@
 namespace Sylius\Bundle\SettingsBundle\Twig;
 
 use Sylius\Bundle\SettingsBundle\Templating\Helper\SettingsHelperInterface;
+use Twig\Extension\AbstractExtension;
+use Twig\TwigFunction;
 
 /**
  * @author Paweł Jędrzejewski <pawel@sylius.org>
  */
-final class SettingsExtension extends \Twig_Extension
+final class SettingsExtension extends AbstractExtension
 {
     /**
      * @var SettingsHelperInterface
@@ -37,7 +39,7 @@ final class SettingsExtension extends \Twig_Extension
     public function getFunctions()
     {
         return [
-             new \Twig_SimpleFunction('sylius_settings', [$this->helper, 'getSettings']),
+             new TwigFunction('sylius_settings', [$this->helper, 'getSettings']),
         ];
     }
 

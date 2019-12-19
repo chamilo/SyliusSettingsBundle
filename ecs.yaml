@@ -1,0 +1,8 @@
+services:
+    SlevomatCodingStandard\Sniffs\Variables\UnusedVariableSniff:
+        ignoreUnusedValuesWhenOnlyKeysAreUsedInForeach: 'true'
+
+parameters:
+    sets:
+        - 'clean-code'
+        - 'symfony'

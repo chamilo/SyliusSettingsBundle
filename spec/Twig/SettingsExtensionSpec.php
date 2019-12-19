@@ -14,6 +14,7 @@ namespace spec\Sylius\Bundle\SettingsBundle\Twig;
 use PhpSpec\ObjectBehavior;
 use Sylius\Bundle\SettingsBundle\Templating\Helper\SettingsHelperInterface;
 use Sylius\Bundle\SettingsBundle\Twig\SettingsExtension;
+use Twig\Extension\ExtensionInterface;
 
 /**
  * @author Paweł Jędrzejewski <pawel@sylius.org>
@@ -32,6 +33,6 @@ final class SettingsExtensionSpec extends ObjectBehavior
 
     function it_should_be_a_twig_extension()
     {
-        $this->shouldHaveType(\Twig_Extension::class);
+        $this->shouldHaveType(ExtensionInterface::class);
     }
 }
