@@ -16,4 +16,5 @@ install:
 
 script:
     - vendor/bin/phpspec run -fpretty --verbose
-    - vendor/bin/ecs check src
+    - composer analyse
+

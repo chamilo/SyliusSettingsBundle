@@ -23,6 +23,7 @@
         "php": "^7.2.5",
         "sylius/registry": "^1.0",
         "sylius/resource-bundle": "^1.0",
+        "doctrine/orm": "~2.5",
         "symfony/config": "^4.0|^5.0",
         "symfony/dependency-injection": "^4.0|^5.0",
         "symfony/form": "^4.0|^5.0",
@@ -33,7 +34,8 @@
     },
     "require-dev": {
         "phpspec/phpspec": "^6.0",
-        "symplify/easy-coding-standard": "^7.1"
+        "symplify/easy-coding-standard": "^7.1",
+        "phpstan/phpstan": "^0.12.3"
     },
     "autoload": {
         "psr-4": { "Sylius\\Bundle\\SettingsBundle\\": "src/" }
@@ -43,6 +45,15 @@
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
+    "scripts": {
+        "analyse": [
+            "@php vendor/bin/ecs check src",
+            "@php vendor/bin/phpstan analyse src -l 1"
+        ],
+        "fix": [
+            "@php vendor/bin/ecs check src --fix"
+        ]
+    },
     "extra": {
         "branch-alias": {
             "dev-master": "1.0-dev"
