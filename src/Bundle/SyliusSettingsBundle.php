@@ -22,9 +22,6 @@ use Symfony\Component\DependencyInjection\ContainerBuilder;
  */
 class SyliusSettingsBundle extends AbstractResourceBundle
 {
-    /**
-     * {@inheritdoc}
-     */
     public function getSupportedDrivers(): array
     {
         return [
@@ -32,10 +29,7 @@ class SyliusSettingsBundle extends AbstractResourceBundle
         ];
     }
 
-    /**
-     * {@inheritdoc}
-     */
-    public function build(ContainerBuilder $container) : void
+    public function build(ContainerBuilder $container): void
     {
         parent::build($container);
 
@@ -43,9 +37,6 @@ class SyliusSettingsBundle extends AbstractResourceBundle
         $container->addCompilerPass(new RegisterResolversPass());
     }
 
-    /**
-     * {@inheritdoc}
-     */
     protected function getModelNamespace(): ?string
     {
         return 'Sylius\Bundle\SettingsBundle\Model';

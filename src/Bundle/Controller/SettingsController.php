@@ -83,7 +83,7 @@ class SettingsController extends FOSRestController
                 return $this->handleView($this->view(null, Response::HTTP_NO_CONTENT));
             }
 
-            $request->getSession()->getBag('flashes')->add($messageType, $message);
+            $this->addFlash($messageType, $message);
 
             if ($request->headers->has('referer')) {
                 return $this->redirect($request->headers->get('referer'));
