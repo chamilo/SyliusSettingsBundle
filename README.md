@@ -1,4 +1,4 @@
-SyliusSettingsBundle [![Build status...](https://secure.travis-ci.org/Chamilo/SyliusSettingsBundle.png?branch=master)](http://travis-ci.org/Sylius/SyliusSettingsBundle)
+SyliusSettingsBundle [![Build status...](https://secure.travis-ci.org/Chamilo/SyliusSettingsBundle.png?branch=master)](https://travis-ci.org/chamilo/SyliusSettingsBundle.svg?branch=master)
 ====================
 
 Settings system with web editing interface for [**Symfony**](http://symfony.com) applications.
