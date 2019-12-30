@@ -17,7 +17,7 @@ use Sylius\Component\Resource\Model\ResourceInterface;
 /**
  * @author Steffen Brem <steffenbrem@gmail.com>
  */
-interface SettingsInterface extends ResourceInterface, \ArrayAccess, \Countable
+interface SettingsInterface extends \ArrayAccess, \Countable //ResourceInterface,
 {
     /**
      * @return string

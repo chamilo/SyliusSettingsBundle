@@ -12,10 +12,10 @@
 namespace spec\Sylius\Bundle\SettingsBundle\Transformer;
 
 use PhpSpec\ObjectBehavior;
+use Sylius\Bundle\SettingsBundle\Resource\RepositoryInterface;
 use Sylius\Bundle\SettingsBundle\spec\Fixture\ParameterFixture;
 use Symfony\Component\Form\DataTransformerInterface;
 use Sylius\Bundle\SettingsBundle\Transformer\ResourceToIdentifierTransformer;
-use Sylius\Component\Resource\Repository\RepositoryInterface;
 
 /**
  * @author Paweł Jędrzejewski <pawel@sylius.org>

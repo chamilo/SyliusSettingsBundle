@@ -11,8 +11,6 @@
 
 namespace Sylius\Bundle\SettingsBundle;
 
-use Sylius\Bundle\ResourceBundle\AbstractResourceBundle;
-use Sylius\Bundle\ResourceBundle\SyliusResourceBundle;
 use Sylius\Bundle\SettingsBundle\DependencyInjection\Compiler\RegisterResolversPass;
 use Sylius\Bundle\SettingsBundle\DependencyInjection\Compiler\RegisterSchemasPass;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
@@ -20,12 +18,12 @@ use Symfony\Component\DependencyInjection\ContainerBuilder;
 /**
  * @author Paweł Jędrzejewski <pawel@sylius.org>
  */
-class SyliusSettingsBundle extends AbstractResourceBundle
+class SyliusSettingsBundle extends AbstractBundle
 {
     public function getSupportedDrivers(): array
     {
         return [
-            SyliusResourceBundle::DRIVER_DOCTRINE_ORM,
+            self::DRIVER_DOCTRINE_ORM,
         ];
     }
 

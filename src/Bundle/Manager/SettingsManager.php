@@ -11,14 +11,14 @@
 
 namespace Sylius\Bundle\SettingsBundle\Manager;
 
-use Doctrine\Common\Persistence\ObjectManager;
+use Doctrine\Persistence\ObjectRepository;
 use Sylius\Bundle\SettingsBundle\Event\SettingsEvent;
 use Sylius\Bundle\SettingsBundle\Model\SettingsInterface;
 use Sylius\Bundle\SettingsBundle\Resolver\SettingsResolverInterface;
+use Sylius\Bundle\SettingsBundle\Resource\FactoryInterface;
 use Sylius\Bundle\SettingsBundle\Schema\SchemaInterface;
 use Sylius\Bundle\SettingsBundle\Schema\SettingsBuilder;
 use Sylius\Component\Registry\ServiceRegistryInterface;
-use Sylius\Component\Resource\Factory\FactoryInterface;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 
 /**
@@ -38,7 +38,7 @@ final class SettingsManager implements SettingsManagerInterface
     private $resolverRegistry;
 
     /**
-     * @var ObjectManager
+     * @var ObjectRepository
      */
     private $manager;
 
@@ -52,17 +52,10 @@ final class SettingsManager implements SettingsManagerInterface
      */
     private $eventDispatcher;
 
-    /**
-     * @param ServiceRegistryInterface $schemaRegistry
-     * @param ServiceRegistryInterface $resolverRegistry
-     * @param ObjectManager            $manager
-     * @param FactoryInterface         $settingsFactory
-     * @param EventDispatcherInterface $eventDispatcher
-     */
     public function __construct(
         ServiceRegistryInterface $schemaRegistry,
         ServiceRegistryInterface $resolverRegistry,
-        ObjectManager $manager,
+        ObjectRepository $manager,
         FactoryInterface $settingsFactory,
         EventDispatcherInterface $eventDispatcher
     ) {

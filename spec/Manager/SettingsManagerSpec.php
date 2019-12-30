@@ -11,12 +11,12 @@
 
 namespace spec\Sylius\Bundle\SettingsBundle\Manager;
 
-use Doctrine\Common\Persistence\ObjectManager;
+use Doctrine\Persistence\ObjectRepository;
 use PhpSpec\ObjectBehavior;
+use Sylius\Bundle\SettingsBundle\Resource\FactoryInterface;
 use Sylius\Bundle\SettingsBundle\Manager\SettingsManager;
 use Sylius\Bundle\SettingsBundle\Manager\SettingsManagerInterface;
 use Sylius\Component\Registry\ServiceRegistryInterface;
-use Sylius\Component\Resource\Factory\FactoryInterface;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 
 /**
@@ -27,7 +27,7 @@ final class SettingsManagerSpec extends ObjectBehavior
     function let(
         ServiceRegistryInterface $schemaRegistry,
         ServiceRegistryInterface $resolverRegistry,
-        ObjectManager $manager,
+        ObjectRepository $manager,
         FactoryInterface $settingsFactory,
         EventDispatcherInterface $eventDispatcher
     ) {

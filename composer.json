@@ -22,15 +22,19 @@
     "require": {
         "php": "^7.2.5",
         "sylius/registry": "^1.0",
-        "sylius/resource-bundle": "^1.0",
         "doctrine/orm": "~2.5",
+        "doctrine/doctrine-bundle": "^2.0",
         "symfony/config": "^4.0|^5.0",
+        "symfony/twig-bridge": "^4.0|^5.0",
+        "symfony/templating": "^4.0|^5.0",
+        "symfony/event-dispatcher": "^4.0|^5.0",
         "symfony/dependency-injection": "^4.0|^5.0",
         "symfony/form": "^4.0|^5.0",
         "symfony/framework-bundle": "^4.0|^5.0",
         "symfony/options-resolver": "^4.0|^5.0",
         "symfony/validator": "^4.0|^5.0",
-        "symfony/yaml": "^4.0|^5.0"
+        "symfony/yaml": "^4.0|^5.0",
+        "friendsofsymfony/rest-bundle": "^2.6"
     },
     "require-dev": {
         "phpspec/phpspec": "^6.0",
@@ -49,9 +53,6 @@
         "analyse": [
             "@php vendor/bin/ecs check src",
             "@php vendor/bin/phpstan analyse src -l 1"
-        ],
-        "fix": [
-            "@php vendor/bin/ecs check src --fix"
         ]
     },
     "extra": {

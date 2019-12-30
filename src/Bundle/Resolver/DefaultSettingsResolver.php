@@ -12,7 +12,7 @@
 namespace Sylius\Bundle\SettingsBundle\Resolver;
 
 use Doctrine\ORM\NonUniqueResultException;
-use Sylius\Component\Resource\Repository\RepositoryInterface;
+use Sylius\Bundle\SettingsBundle\Resource\RepositoryInterface;
 
 /**
  * @author Steffen Brem <steffenbrem@gmail.com>

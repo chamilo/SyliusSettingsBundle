@@ -11,7 +11,7 @@
 
 namespace Sylius\Bundle\SettingsBundle\Transformer;
 
-use Sylius\Component\Resource\Repository\RepositoryInterface;
+use Sylius\Bundle\SettingsBundle\Resource\RepositoryInterface;
 use Symfony\Component\Form\DataTransformerInterface;
 use Symfony\Component\PropertyAccess\PropertyAccess;
 
