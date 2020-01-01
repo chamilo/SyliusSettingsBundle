@@ -25,13 +25,13 @@
             <argument type="service" id="form.factory" />
         </service>
 
-        <service id="sylius.settings_manager" public="true" class="Sylius\Bundle\SettingsBundle\Manager\SettingsManager">
-            <argument type="service" id="sylius.registry.settings_schema" />
-            <argument type="service" id="sylius.registry.settings_resolver" />
-            <argument type="service" id="sylius.manager.settings" />
-            <argument type="service" id="sylius.factory.settings" />
-            <argument type="service" id="event_dispatcher" />
-        </service>
+<!--        <service id="sylius.settings_manager" public="true" class="Sylius\Bundle\SettingsBundle\Manager\SettingsManager">-->
+<!--            <argument type="service" id="sylius.registry.settings_schema" />-->
+<!--            <argument type="service" id="sylius.registry.settings_resolver" />-->
+<!--            <argument type="service" id="sylius.manager.settings" />-->
+<!--            <argument type="service" id="sylius.factory.settings" />-->
+<!--            <argument type="service" id="event_dispatcher" />-->
+<!--        </service>-->
 
         <service id="sylius.registry.settings_schema" public="true" class="Sylius\Component\Registry\ServiceRegistry" lazy="true">
             <argument>Sylius\Bundle\SettingsBundle\Schema\SchemaInterface</argument>
