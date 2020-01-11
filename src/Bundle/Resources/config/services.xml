@@ -59,7 +59,7 @@
             <tag name="doctrine.event_listener" event="postLoad"/>
         </service>
 
-        <service id="sylius.templating.helper.settings" class="Sylius\Bundle\SettingsBundle\Templating\Helper\SettingsHelper">
+        <!--<service id="sylius.templating.helper.settings" class="Sylius\Bundle\SettingsBundle\Templating\Helper\SettingsHelper">
             <argument type="service" id="sylius.settings_manager" />
             <tag name="templating.helper" alias="sylius_settings" />
         </service>
@@ -67,6 +67,6 @@
         <service id="sylius.twig.extension.settings" class="Sylius\Bundle\SettingsBundle\Twig\SettingsExtension" public="false">
             <argument type="service" id="sylius.templating.helper.settings" />
             <tag name="twig.extension" />
-        </service>
+        </service>-->
     </services>
 </container>
