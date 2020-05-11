@@ -33,8 +33,7 @@
         "symfony/framework-bundle": "^4.0|^5.0",
         "symfony/options-resolver": "^4.0|^5.0",
         "symfony/validator": "^4.0|^5.0",
-        "symfony/yaml": "^4.0|^5.0",
-        "friendsofsymfony/rest-bundle": "^2.6|dev-master"
+        "symfony/yaml": "^4.0|^5.0"
     },
     "require-dev": {
         "phpspec/phpspec": "^6.0",

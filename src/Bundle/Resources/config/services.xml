@@ -13,13 +13,6 @@
 
 <container xmlns="http://symfony.com/schema/dic/services" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
     <services>
-        <service id="sylius.controller.settings" class="Sylius\Bundle\SettingsBundle\Controller\SettingsController">
-            <call method="setContainer">
-                <argument type="service" id="service_container" />
-            </call>
-            <tag name="controller.service_arguments"/>
-        </service>
-
         <service id="sylius.form_factory.settings" public="true" class="Sylius\Bundle\SettingsBundle\Form\Factory\SettingsFormFactory">
             <argument type="service" id="sylius.registry.settings_schema" />
             <argument type="service" id="form.factory" />
