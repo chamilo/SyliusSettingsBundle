@@ -20,7 +20,7 @@
         }
     ],
     "require": {
-        "php": "^7.2.5",
+        "php": "^7.2.9 || ^8.0",
         "sylius/registry": "^1.0",
         "doctrine/orm": "~2.5|^3.0",
         "doctrine/doctrine-bundle": "^1.0|^2.0",
