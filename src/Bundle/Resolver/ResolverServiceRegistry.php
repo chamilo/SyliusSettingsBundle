@@ -11,7 +11,7 @@
 
 namespace Sylius\Bundle\SettingsBundle\Resolver;
 
-use Sylius\Component\Registry\ServiceRegistryInterface;
+use Sylius\Bundle\SettingsBundle\Registry\ServiceRegistryInterface;
 
 /**
  * Cannot be final, because it is proxied.

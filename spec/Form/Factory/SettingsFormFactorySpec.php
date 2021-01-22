@@ -15,7 +15,7 @@ use PhpSpec\ObjectBehavior;
 use Sylius\Bundle\SettingsBundle\Form\Factory\SettingsFormFactory;
 use Sylius\Bundle\SettingsBundle\Form\Factory\SettingsFormFactoryInterface;
 use Sylius\Bundle\SettingsBundle\Schema\SchemaInterface;
-use Sylius\Component\Registry\ServiceRegistryInterface;
+use Sylius\Bundle\SettingsBundle\Registry\ServiceRegistryInterface;
 use Symfony\Component\Form\Extension\Core\Type\FormType;
 use Symfony\Component\Form\FormBuilder;
 use Symfony\Component\Form\FormFactoryInterface;

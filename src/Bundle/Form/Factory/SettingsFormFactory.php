@@ -11,9 +11,9 @@
 
 namespace Sylius\Bundle\SettingsBundle\Form\Factory;
 
+use Sylius\Bundle\SettingsBundle\Registry\ServiceRegistryInterface;
 use Sylius\Bundle\SettingsBundle\Schema\SchemaFormOptionsInterface;
 use Sylius\Bundle\SettingsBundle\Schema\SchemaInterface;
-use Sylius\Component\Registry\ServiceRegistryInterface;
 use Symfony\Component\Form\Extension\Core\Type\FormType;
 use Symfony\Component\Form\FormFactoryInterface;
 
