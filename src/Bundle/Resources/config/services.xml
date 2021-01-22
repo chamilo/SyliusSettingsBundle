@@ -26,14 +26,14 @@
 <!--            <argument type="service" id="event_dispatcher" />-->
 <!--        </service>-->
 
-        <service id="sylius.registry.settings_schema" public="true" class="Sylius\Component\Registry\ServiceRegistry" lazy="true">
+        <service id="sylius.registry.settings_schema" public="true" class="Sylius\Bundle\SettingsBundle\Registry\ServiceRegistry" lazy="true">
             <argument>Sylius\Bundle\SettingsBundle\Schema\SchemaInterface</argument>
             <argument>Settings schema</argument>
         </service>
 
         <service id="sylius.registry.settings_resolver" class="Sylius\Bundle\SettingsBundle\Resolver\ResolverServiceRegistry" lazy="true">
             <argument type="service">
-                <service class="Sylius\Component\Registry\ServiceRegistry">
+                <service class="Sylius\Bundle\SettingsBundle\Registry\ServiceRegistry">
                     <argument>Sylius\Bundle\SettingsBundle\Resolver\SettingsResolverInterface</argument>
                     <argument>Settings resolver</argument>
                 </service>
