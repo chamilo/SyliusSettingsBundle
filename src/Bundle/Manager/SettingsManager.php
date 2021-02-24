@@ -14,11 +14,11 @@ namespace Sylius\Bundle\SettingsBundle\Manager;
 use Doctrine\Persistence\ObjectRepository;
 use Sylius\Bundle\SettingsBundle\Event\SettingsEvent;
 use Sylius\Bundle\SettingsBundle\Model\SettingsInterface;
+use Sylius\Bundle\SettingsBundle\Registry\ServiceRegistryInterface;
 use Sylius\Bundle\SettingsBundle\Resolver\SettingsResolverInterface;
 use Sylius\Bundle\SettingsBundle\Resource\FactoryInterface;
 use Sylius\Bundle\SettingsBundle\Schema\SchemaInterface;
 use Sylius\Bundle\SettingsBundle\Schema\SettingsBuilder;
-use Sylius\Component\Registry\ServiceRegistryInterface;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 
 /**

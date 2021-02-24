@@ -16,7 +16,7 @@ use PhpSpec\ObjectBehavior;
 use Sylius\Bundle\SettingsBundle\Resource\FactoryInterface;
 use Sylius\Bundle\SettingsBundle\Manager\SettingsManager;
 use Sylius\Bundle\SettingsBundle\Manager\SettingsManagerInterface;
-use Sylius\Component\Registry\ServiceRegistryInterface;
+use Sylius\Bundle\SettingsBundle\Registry\ServiceRegistryInterface;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 
 /**
