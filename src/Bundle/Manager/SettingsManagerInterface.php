@@ -24,7 +24,7 @@ interface SettingsManagerInterface
      *
      * @return SettingsInterface
      */
-    public function load($schemaAlias, $namespace = null);
+    public function load(string $schemaAlias, string $namespace = null);
 
     /**
      * @param SettingsInterface $settings

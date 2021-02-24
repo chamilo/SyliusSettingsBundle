@@ -69,7 +69,7 @@ final class SettingsManager implements SettingsManagerInterface
     /**
      * {@inheritdoc}
      */
-    public function load($schemaAlias, $namespace = null, $ignoreUnknown = true)
+    public function load(string $schemaAlias, string $namespace = null, bool $ignoreUnknown = true)
     {
         /** @var SchemaInterface $schema */
         $schema = $this->schemaRegistry->get($schemaAlias);
