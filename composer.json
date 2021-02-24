@@ -36,8 +36,8 @@
     },
     "require-dev": {
         "phpspec/phpspec": "^6.0",
-        "symplify/easy-coding-standard": "^7.1",
-        "phpstan/phpstan": "^0.12.3"
+        "symplify/easy-coding-standard": "^9.0",
+        "phpstan/phpstan": "^0.12"
     },
     "autoload": {
         "psr-4": { "Sylius\\Bundle\\SettingsBundle\\": "src/Bundle/" }
