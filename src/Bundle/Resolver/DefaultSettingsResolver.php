@@ -24,9 +24,6 @@ final class DefaultSettingsResolver implements SettingsResolverInterface
      */
     private $settingsRepository;
 
-    /**
-     * @param RepositoryInterface $settingsRepository
-     */
     public function __construct(RepositoryInterface $settingsRepository)
     {
         $this->settingsRepository = $settingsRepository;
@@ -46,11 +43,7 @@ final class DefaultSettingsResolver implements SettingsResolverInterface
 
             return $this->settingsRepository->findOneBy($criteria);
         } catch (NonUniqueResultException $exception) {
-            throw new \LogicException(
-                sprintf('Multiple schemas found for "%s". You should probably define a custom settings resolver for this schema.', $schemaAlias),
-                0,
-                $exception
-            );
+            throw new \LogicException(sprintf('Multiple schemas found for "%s". You should probably define a custom settings resolver for this schema.', $schemaAlias), 0, $exception);
         }
     }
 }

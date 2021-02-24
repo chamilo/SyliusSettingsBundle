@@ -54,9 +54,7 @@ class ServiceRegistry implements ServiceRegistryInterface
         }
 
         if (!$service instanceof $this->className) {
-            throw new \InvalidArgumentException(
-                sprintf('%s needs to be of type "%s", "%s" given.', ucfirst($this->context), $this->className, get_class($service))
-            );
+            throw new \InvalidArgumentException(sprintf('%s needs to be of type "%s", "%s" given.', ucfirst($this->context), $this->className, get_class($service)));
         }
 
         $this->services[$identifier] = $service;

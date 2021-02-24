@@ -44,9 +44,6 @@ interface SettingsInterface extends \ArrayAccess, \Countable //ResourceInterface
      */
     public function getParameters();
 
-    /**
-     * @param array $parameters
-     */
     public function setParameters(array $parameters);
 
     /**

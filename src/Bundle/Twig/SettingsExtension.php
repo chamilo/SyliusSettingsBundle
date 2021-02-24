@@ -25,9 +25,6 @@ final class SettingsExtension extends AbstractExtension
      */
     private $helper;
 
-    /**
-     * @param SettingsHelperInterface $helper
-     */
     public function __construct(SettingsHelperInterface $helper)
     {
         $this->helper = $helper;

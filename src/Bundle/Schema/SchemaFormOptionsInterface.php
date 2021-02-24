@@ -18,8 +18,6 @@ interface SchemaFormOptionsInterface
 {
     /**
      * Returns options for settings form.
-     *
-     * @return array
      */
     public function getOptions(): array;
 }

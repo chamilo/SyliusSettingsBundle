@@ -21,7 +21,6 @@ interface SettingsFormFactoryInterface
     /**
      * @param string     $schemaAlias
      * @param mixed|null $data
-     * @param array      $options
      *
      * @return FormInterface
      */

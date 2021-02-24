@@ -24,8 +24,7 @@ interface SettingsBuilderInterface
     public function getTransformers();
 
     /**
-     * @param string                   $parameterName
-     * @param DataTransformerInterface $transformer
+     * @param string $parameterName
      */
     public function setTransformer($parameterName, DataTransformerInterface $transformer);
 }

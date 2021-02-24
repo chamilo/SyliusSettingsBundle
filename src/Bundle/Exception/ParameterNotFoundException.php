@@ -17,9 +17,8 @@ namespace Sylius\Bundle\SettingsBundle\Exception;
 final class ParameterNotFoundException extends \InvalidArgumentException
 {
     /**
-     * @param string          $parameter
-     * @param int             $code
-     * @param \Exception|null $previousException
+     * @param string $parameter
+     * @param int    $code
      */
     public function __construct($parameter, $code = 0, \Exception $previousException = null)
     {

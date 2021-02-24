@@ -30,10 +30,6 @@ class ResolverServiceRegistry implements ServiceRegistryInterface
      */
     private $defaultResolver;
 
-    /**
-     * @param ServiceRegistryInterface  $decoratedRegistry
-     * @param SettingsResolverInterface $defaultResolver
-     */
     public function __construct(ServiceRegistryInterface $decoratedRegistry, SettingsResolverInterface $defaultResolver)
     {
         $this->decoratedRegistry = $decoratedRegistry;

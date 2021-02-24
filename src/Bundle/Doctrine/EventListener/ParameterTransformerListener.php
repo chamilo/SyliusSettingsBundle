@@ -35,18 +35,12 @@ final class ParameterTransformerListener
      */
     private $parametersMap = [];
 
-    /**
-     * @param ContainerInterface $container
-     */
     public function __construct(ContainerInterface $container)
     {
         // Circular reference detected for service "doctrine.dbal.default_connection", path: "doctrine.dbal.default_connection".
         $this->container = $container;
     }
 
-    /**
-     * @param LifecycleEventArgs $event
-     */
     public function postLoad(LifecycleEventArgs $event)
     {
         $settings = $event->getObject();
@@ -56,9 +50,6 @@ final class ParameterTransformerListener
         }
     }
 
-    /**
-     * @param OnFlushEventArgs $event
-     */
     public function onFlush(OnFlushEventArgs $event)
     {
         $entityManager = $event->getEntityManager();
@@ -88,10 +79,6 @@ final class ParameterTransformerListener
         $this->parametersMap = [];
     }
 
-    /**
-     * @param SettingsInterface $settings
-     * @param EntityManager     $entityManager
-     */
     private function transform(SettingsInterface $settings, EntityManager $entityManager)
     {
         // store old parameters, so we can revert to it after flush
@@ -111,9 +98,6 @@ final class ParameterTransformerListener
         $entityManager->getUnitOfWork()->recomputeSingleEntityChangeSet($classMetadata, $settings);
     }
 
-    /**
-     * @param SettingsInterface $settings
-     */
     private function reverseTransform(SettingsInterface $settings)
     {
         $transformers = $this->getTransformers($settings);
@@ -125,8 +109,6 @@ final class ParameterTransformerListener
     }
 
     /**
-     * @param SettingsInterface $settings
-     *
      * @return DataTransformerInterface[]
      */
     private function getTransformers(SettingsInterface $settings)
