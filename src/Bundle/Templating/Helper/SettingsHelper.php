@@ -12,6 +12,7 @@
 namespace Sylius\Bundle\SettingsBundle\Templating\Helper;
 
 use Sylius\Bundle\SettingsBundle\Manager\SettingsManagerInterface;
+use Sylius\Bundle\SettingsBundle\Model\SettingsInterface;
 use Symfony\Component\Templating\Helper\Helper;
 
 final class SettingsHelper extends Helper implements SettingsHelperInterface
@@ -29,10 +30,7 @@ final class SettingsHelper extends Helper implements SettingsHelperInterface
         $this->settingsManager = $settingsManager;
     }
 
-    /**
-     * {@inheritdoc}
-     */
-    public function getSettings($schemaAlias)
+    public function getSettings($schemaAlias): SettingsInterface
     {
         return $this->settingsManager->load($schemaAlias);
     }

@@ -18,13 +18,7 @@ use Symfony\Component\Form\FormBuilderInterface;
  */
 interface SchemaInterface
 {
-    /**
-     * @param SettingsBuilderInterface $builder
-     */
     public function buildSettings(AbstractSettingsBuilder $builder);
 
-    /**
-     * @param FormBuilderInterface $builder
-     */
     public function buildForm(FormBuilderInterface $builder);
 }

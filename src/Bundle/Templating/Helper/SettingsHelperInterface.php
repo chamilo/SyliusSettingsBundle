@@ -11,6 +11,7 @@
 
 namespace Sylius\Bundle\SettingsBundle\Templating\Helper;
 
+use Sylius\Bundle\SettingsBundle\Model\SettingsInterface;
 use Symfony\Component\Templating\Helper\HelperInterface;
 
 /**
@@ -20,8 +21,6 @@ interface SettingsHelperInterface extends HelperInterface
 {
     /**
      * @param string $schemaAlias
-     *
-     * @return array
      */
-    public function getSettings($schemaAlias);
+    public function getSettings($schemaAlias): SettingsInterface;
 }

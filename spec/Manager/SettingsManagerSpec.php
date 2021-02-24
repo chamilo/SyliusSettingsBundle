@@ -11,7 +11,7 @@
 
 namespace spec\Sylius\Bundle\SettingsBundle\Manager;
 
-use Doctrine\Persistence\ObjectRepository;
+use Doctrine\Persistence\ObjectManager;
 use PhpSpec\ObjectBehavior;
 use Sylius\Bundle\SettingsBundle\Resource\FactoryInterface;
 use Sylius\Bundle\SettingsBundle\Manager\SettingsManager;
@@ -27,7 +27,7 @@ final class SettingsManagerSpec extends ObjectBehavior
     function let(
         ServiceRegistryInterface $schemaRegistry,
         ServiceRegistryInterface $resolverRegistry,
-        ObjectRepository $manager,
+        ObjectManager $manager,
         FactoryInterface $settingsFactory,
         EventDispatcherInterface $eventDispatcher
     ) {

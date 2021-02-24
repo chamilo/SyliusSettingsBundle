@@ -15,19 +15,11 @@ use Sylius\Bundle\SettingsBundle\Model\SettingsInterface;
 
 /**
  * @author Paweł Jędrzejewski <pawel@sylius.org>
+ * @author Julio Montoya
  */
 interface SettingsManagerInterface
 {
-    /**
-     * @param string      $schemaAlias
-     * @param string|null $namespace
-     *
-     * @return SettingsInterface
-     */
-    public function load(string $schemaAlias, string $namespace = null);
+    public function load(string $schemaAlias, string $namespace = null, bool $ignoreUnknown = true): SettingsInterface;
 
-    /**
-     * @param SettingsInterface $settings
-     */
     public function save(SettingsInterface $settings);
 }

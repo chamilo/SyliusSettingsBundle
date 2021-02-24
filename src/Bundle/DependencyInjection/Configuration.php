@@ -44,9 +44,6 @@ final class Configuration implements ConfigurationInterface
         return $treeBuilder;
     }
 
-    /**
-     * @param ArrayNodeDefinition $node
-     */
     private function addClassesSection(ArrayNodeDefinition $node)
     {
         $node

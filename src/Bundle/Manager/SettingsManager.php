@@ -11,7 +11,7 @@
 
 namespace Sylius\Bundle\SettingsBundle\Manager;
 
-use Doctrine\Persistence\ObjectRepository;
+use Doctrine\Persistence\ObjectManager;
 use Sylius\Bundle\SettingsBundle\Event\SettingsEvent;
 use Sylius\Bundle\SettingsBundle\Model\SettingsInterface;
 use Sylius\Bundle\SettingsBundle\Registry\ServiceRegistryInterface;
@@ -38,7 +38,7 @@ final class SettingsManager implements SettingsManagerInterface
     private $resolverRegistry;
 
     /**
-     * @var ObjectRepository
+     * @var ObjectManager
      */
     private $manager;
 
@@ -55,7 +55,7 @@ final class SettingsManager implements SettingsManagerInterface
     public function __construct(
         ServiceRegistryInterface $schemaRegistry,
         ServiceRegistryInterface $resolverRegistry,
-        ObjectRepository $manager,
+        ObjectManager $manager,
         FactoryInterface $settingsFactory,
         EventDispatcherInterface $eventDispatcher
     ) {
@@ -69,7 +69,7 @@ final class SettingsManager implements SettingsManagerInterface
     /**
      * {@inheritdoc}
      */
-    public function load(string $schemaAlias, string $namespace = null, bool $ignoreUnknown = true)
+    public function load(string $schemaAlias, string $namespace = null, bool $ignoreUnknown = true): SettingsInterface
     {
         /** @var SchemaInterface $schema */
         $schema = $this->schemaRegistry->get($schemaAlias);
