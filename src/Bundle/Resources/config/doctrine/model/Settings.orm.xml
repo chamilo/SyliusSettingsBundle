@@ -27,7 +27,7 @@
 
         <field name="schemaAlias" length="190" column="schema_alias" type="string" nullable="false"/>
         <field name="namespace" length="190" type="string" nullable="true"/>
-        <field name="parameters" type="json_array"/>
+        <field name="parameters" type="json"/>
     </mapped-superclass>
 
 </doctrine-mapping>
