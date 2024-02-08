@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### v1.1.1
+
+* Fix typo in new default dev branch
+
 ### v1.1.0
 
 * Changed phpspec dependency from ^6.0 to ^7.0 to support PHP 8.1-8.3
