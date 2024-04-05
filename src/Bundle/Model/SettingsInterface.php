@@ -19,59 +19,29 @@ use Sylius\Component\Resource\Model\ResourceInterface;
  */
 interface SettingsInterface extends \ArrayAccess, \Countable //ResourceInterface,
 {
-    /**
-     * @return string
-     */
-    public function getSchemaAlias();
+    public function getSchemaAlias(): string;
+
+    public function setSchemaAlias(string $schemaAlias);
+
+    public function getNamespace(): string;
+
+    public function setNamespace(string $namespace): void;
+
+    public function getParameters(): array;
+
+    public function setParameters(array $parameters): void;
 
     /**
-     * @param string $schemaAlias
-     */
-    public function setSchemaAlias($schemaAlias);
-
-    /**
-     * @return string
-     */
-    public function getNamespace();
-
-    /**
-     * @param string $namespace
-     */
-    public function setNamespace($namespace);
-
-    /**
-     * @return array
-     */
-    public function getParameters();
-
-    public function setParameters(array $parameters);
-
-    /**
-     * @param string $name
-     *
-     * @return mixed
-     *
      * @throws ParameterNotFoundException
      */
-    public function get($name);
+    public function get(string $name): mixed;
+
+    public function has(string $name): bool;
+
+    public function set(string $name, mixed $value): void;
 
     /**
-     * @param string $name
-     *
-     * @return bool
-     */
-    public function has($name);
-
-    /**
-     * @param string $name
-     * @param mixed  $value
-     */
-    public function set($name, $value);
-
-    /**
-     * @param string $name
-     *
      * @throws ParameterNotFoundException
      */
-    public function remove($name);
+    public function remove(string $name): void;
 }
