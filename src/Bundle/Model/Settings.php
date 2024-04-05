@@ -38,26 +38,17 @@ class Settings implements SettingsInterface
      */
     protected $parameters = [];
 
-    /**
-     * {@inheritdoc}
-     */
     public function getId()
     {
         return $this->id;
     }
 
-    /**
-     * {@inheritdoc}
-     */
-    public function getSchemaAlias()
+    public function getSchemaAlias(): string
     {
         return $this->schemaAlias;
     }
 
-    /**
-     * {@inheritdoc}
-     */
-    public function setSchemaAlias($schemaAlias)
+    public function setSchemaAlias(string $schemaAlias): void
     {
         if (null !== $this->schemaAlias) {
             throw new \LogicException('The schema alias of the settings model is immutable, instantiate a new object in order to use another schema.');
@@ -66,18 +57,12 @@ class Settings implements SettingsInterface
         $this->schemaAlias = $schemaAlias;
     }
 
-    /**
-     * {@inheritdoc}
-     */
-    public function getNamespace()
+    public function getNamespace(): string
     {
         return $this->namespace;
     }
 
-    /**
-     * {@inheritdoc}
-     */
-    public function setNamespace($namespace)
+    public function setNamespace($namespace): void
     {
         if (null !== $this->namespace) {
             throw new \LogicException('The namespace of the settings model is immutable, instantiate a new object in order to use another namespace.');
@@ -86,66 +71,42 @@ class Settings implements SettingsInterface
         $this->namespace = $namespace;
     }
 
-    /**
-     * {@inheritdoc}
-     */
-    public function getParameters()
+    public function getParameters(): array
     {
         return $this->parameters;
     }
 
-    /**
-     * {@inheritdoc}
-     */
-    public function setParameters(array $parameters)
+    public function setParameters(array $parameters): void
     {
         $this->parameters = $parameters;
     }
 
-    /**
-     * {@inheritdoc}
-     */
-    public function offsetExists($offset)
+    public function offsetExists(mixed $offset): bool
     {
         return $this->has($offset);
     }
 
-    /**
-     * {@inheritdoc}
-     */
-    public function offsetGet($offset)
+    public function offsetGet(mixed $offset): mixed
     {
         return $this->get($offset);
     }
 
-    /**
-     * {@inheritdoc}
-     */
-    public function offsetSet($offset, $value)
+    public function offsetSet(mixed $offset, mixed $value): void
     {
         $this->set($offset, $value);
     }
 
-    /**
-     * {@inheritdoc}
-     */
-    public function offsetUnset($offset)
+    public function offsetUnset(mixed $offset): void
     {
         $this->remove($offset);
     }
 
-    /**
-     * {@inheritdoc}
-     */
-    public function count()
+    public function count(): int
     {
         return count($this->parameters);
     }
 
-    /**
-     * {@inheritdoc}
-     */
-    public function get($name)
+    public function get(string $name): mixed
     {
         if (!$this->has($name)) {
             throw new ParameterNotFoundException($name);
@@ -154,26 +115,17 @@ class Settings implements SettingsInterface
         return $this->parameters[$name];
     }
 
-    /**
-     * {@inheritdoc}
-     */
-    public function has($name)
+    public function has(string $name): bool
     {
         return array_key_exists($name, $this->parameters);
     }
 
-    /**
-     * {@inheritdoc}
-     */
-    public function set($name, $value)
+    public function set(string $name, mixed $value): void
     {
         $this->parameters[$name] = $value;
     }
 
-    /**
-     * {@inheritdoc}
-     */
-    public function remove($name)
+    public function remove(string $name): void
     {
         if (!$this->has($name)) {
             throw new ParameterNotFoundException($name);
