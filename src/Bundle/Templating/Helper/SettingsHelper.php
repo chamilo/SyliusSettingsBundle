@@ -17,25 +17,19 @@ use Symfony\Component\Templating\Helper\Helper;
 
 final class SettingsHelper extends Helper implements SettingsHelperInterface
 {
-    /**
-     * @var SettingsManagerInterface
-     */
-    private $settingsManager;
+    private SettingsManagerInterface $settingsManager;
 
     public function __construct(SettingsManagerInterface $settingsManager)
     {
         $this->settingsManager = $settingsManager;
     }
 
-    public function getSettings($schemaAlias): SettingsInterface
+    public function getSettings(string $schemaAlias): SettingsInterface
     {
         return $this->settingsManager->load($schemaAlias);
     }
 
-    /**
-     * {@inheritdoc}
-     */
-    public function getName()
+    public function getName(): string
     {
         return 'sylius_settings';
     }

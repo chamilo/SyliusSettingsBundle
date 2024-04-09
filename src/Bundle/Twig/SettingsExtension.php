@@ -20,30 +20,21 @@ use Twig\TwigFunction;
  */
 final class SettingsExtension extends AbstractExtension
 {
-    /**
-     * @var SettingsHelperInterface
-     */
-    private $helper;
+    private SettingsHelperInterface $helper;
 
     public function __construct(SettingsHelperInterface $helper)
     {
         $this->helper = $helper;
     }
 
-    /**
-     * {@inheritdoc}
-     */
-    public function getFunctions()
+    public function getFunctions(): array
     {
         return [
              new TwigFunction('sylius_settings', [$this->helper, 'getSettings']),
         ];
     }
 
-    /**
-     * {@inheritdoc}
-     */
-    public function getName()
+    public function getName(): string
     {
         return 'sylius_settings';
     }

@@ -20,10 +20,7 @@ use Symfony\Component\DependencyInjection\Reference;
  */
 final class RegisterResolversPass implements CompilerPassInterface
 {
-    /**
-     * {@inheritdoc}
-     */
-    public function process(ContainerBuilder $container)
+    public function process(ContainerBuilder $container): void
     {
         if (!$container->hasDefinition('sylius.registry.settings_resolver')) {
             return;

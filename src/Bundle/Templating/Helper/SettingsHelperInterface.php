@@ -19,8 +19,5 @@ use Symfony\Component\Templating\Helper\HelperInterface;
  */
 interface SettingsHelperInterface extends HelperInterface
 {
-    /**
-     * @param string $schemaAlias
-     */
-    public function getSettings($schemaAlias): SettingsInterface;
+    public function getSettings(string $schemaAlias): SettingsInterface;
 }
