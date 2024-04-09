@@ -12,12 +12,11 @@
 namespace Sylius\Bundle\SettingsBundle\Templating\Helper;
 
 use Sylius\Bundle\SettingsBundle\Model\SettingsInterface;
-use Symfony\Component\Templating\Helper\HelperInterface;
 
 /**
  * @author Kamil Kokot <kamil.kokot@lakion.com>
  */
-interface SettingsHelperInterface extends HelperInterface
+interface SettingsHelperInterface
 {
     public function getSettings(string $schemaAlias): SettingsInterface;
 }

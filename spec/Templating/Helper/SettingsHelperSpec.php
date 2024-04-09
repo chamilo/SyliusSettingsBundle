@@ -16,7 +16,6 @@ use Sylius\Bundle\SettingsBundle\Manager\SettingsManagerInterface;
 use Sylius\Bundle\SettingsBundle\Model\SettingsInterface;
 use Sylius\Bundle\SettingsBundle\Templating\Helper\SettingsHelper;
 use Sylius\Bundle\SettingsBundle\Templating\Helper\SettingsHelperInterface;
-use Symfony\Component\Templating\Helper\Helper;
 
 final class SettingsHelperSpec extends ObjectBehavior
 {
@@ -33,11 +32,6 @@ final class SettingsHelperSpec extends ObjectBehavior
     function it_implements_settings_helper_interface()
     {
         $this->shouldImplement(SettingsHelperInterface::class);
-    }
-
-    function it_is_a_twig_helper()
-    {
-        $this->shouldHaveType(Helper::class);
     }
 
     function it_returns_settings_by_namespace(SettingsManagerInterface $settingsManager, SettingsInterface $settings)
