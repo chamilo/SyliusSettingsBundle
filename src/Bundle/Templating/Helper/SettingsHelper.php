@@ -13,30 +13,38 @@ namespace Sylius\Bundle\SettingsBundle\Templating\Helper;
 
 use Sylius\Bundle\SettingsBundle\Manager\SettingsManagerInterface;
 use Sylius\Bundle\SettingsBundle\Model\SettingsInterface;
-use Symfony\Component\Templating\Helper\Helper;
 
-final class SettingsHelper extends Helper implements SettingsHelperInterface
+class SettingsHelper implements SettingsHelperInterface
 {
-    /**
-     * @var SettingsManagerInterface
-     */
-    private $settingsManager;
+    protected string $charset = 'UTF-8';
+
+    protected SettingsManagerInterface $settingsManager;
 
     public function __construct(SettingsManagerInterface $settingsManager)
     {
         $this->settingsManager = $settingsManager;
     }
 
-    public function getSettings($schemaAlias): SettingsInterface
+    public function getSettings(string $schemaAlias): SettingsInterface
     {
         return $this->settingsManager->load($schemaAlias);
     }
 
-    /**
-     * {@inheritdoc}
-     */
-    public function getName()
+    public function getName(): string
     {
         return 'sylius_settings';
+    }
+
+    public function setCharset(string $charset): void
+    {
+        $this->charset = $charset;
+    }
+
+    /**
+     * Gets the default charset.
+     */
+    public function getCharset(): string
+    {
+        return $this->charset;
     }
 }

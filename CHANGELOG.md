@@ -1,6 +1,15 @@
 CHANGELOG
 =========
 
+### v1.3.0
+
+* Fix deprecations warnings for Symfony 6.4
+* Remove deprecated symfony/templating component
+
+### v1.2.0
+
+* Fix deprecations warnings for Symfony 6.1 
+
 ### v1.1.1
 
 * Fix typo in new default dev branch
