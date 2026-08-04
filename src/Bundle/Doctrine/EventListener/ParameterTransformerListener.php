@@ -11,9 +11,9 @@
 
 namespace Sylius\Bundle\SettingsBundle\Doctrine\EventListener;
 
-use Doctrine\ORM\EntityManager;
-use Doctrine\ORM\Event\LifecycleEventArgs;
+use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\ORM\Event\OnFlushEventArgs;
+use Doctrine\Persistence\Event\LifecycleEventArgs;
 use Sylius\Bundle\SettingsBundle\Model\SettingsInterface;
 use Sylius\Bundle\SettingsBundle\Schema\SchemaInterface;
 use Sylius\Bundle\SettingsBundle\Schema\SettingsBuilder;
@@ -52,7 +52,7 @@ final class ParameterTransformerListener
 
     public function onFlush(OnFlushEventArgs $event)
     {
-        $entityManager = $event->getEntityManager();
+        $entityManager = $event->getObjectManager();
         $unitOfWork = $entityManager->getUnitOfWork();
 
         foreach ($unitOfWork->getScheduledEntityInsertions() as $entity) {
@@ -79,7 +79,7 @@ final class ParameterTransformerListener
         $this->parametersMap = [];
     }
 
-    private function transform(SettingsInterface $settings, EntityManager $entityManager)
+    private function transform(SettingsInterface $settings, EntityManagerInterface $entityManager)
     {
         // store old parameters, so we can revert to it after flush
         $this->parametersMap[] = [
